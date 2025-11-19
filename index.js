@@ -13,16 +13,15 @@ const {
   InteractionManager,
 } = ReactNative;
 
-const ViewPagerAndroid = require('@react-native-community/viewpager');
 const TimerMixin = require('react-timer-mixin');
-const ViewPager = require('@react-native-community/viewpager');
+import PagerView from 'react-native-pager-view';
 
 const SceneComponent = require('./SceneComponent');
 const DefaultTabBar = require('./DefaultTabBar');
 const ScrollableTabBar = require('./ScrollableTabBar');
 
 const AnimatedViewPagerAndroid = Platform.OS === 'android' ?
-  Animated.createAnimatedComponent(ViewPager) :
+  Animated.createAnimatedComponent(PagerView) :
   undefined;
 
 const ScrollableTabView = createReactClass({
@@ -317,7 +316,7 @@ const ScrollableTabView = createReactClass({
   _onChangeTab(prevPage, currentPage) {
     this.props.onChangeTab({
       i: currentPage,
-      ref: this._children()[currentPage],
+      component: this._children()[currentPage],
       from: prevPage,
     });
   },
