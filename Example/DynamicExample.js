@@ -39,7 +39,7 @@ export default createReactClass({
     );
   },
 
-  handleChangeTab({i, ref, from, }) {
+  handleChangeTab({i, component, from, }) {
     this.children[i].onEnter();
     this.children[from].onLeave();
   },

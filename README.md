@@ -80,7 +80,7 @@ To start you can just copy [DefaultTabBar](https://github.com/skv-headless/react
 - **`tabBarPosition`** _(String)_ Defaults to `"top"`.
   - `"bottom"` to position the tab bar below content.
   - `"overlayTop"` or `"overlayBottom"` for a semitransparent tab bar that overlays content. Custom tab bars must consume a style prop on their outer element to support this feature: `style={this.props.style}`.
-- **`onChangeTab`** _(Function)_ - function to call when tab changes, should accept 1 argument which is an Object containing two keys: `i`: the index of the tab that is selected, `ref`: the ref of the tab that is selected
+- **`onChangeTab`** _(Function)_ - function to call when tab changes, should accept 1 argument which is an Object containing two keys: `i`: the index of the tab that is selected, `component`: the component of the tab that is selected
 - **`onScroll`** _(Function)_ - function to call when the pages are sliding, should accept 1 argument which is an Float number representing the page position in the slide frame.
 - **`locked`** _(Bool)_ - disables horizontal dragging to scroll between tabs, default is false.
 - **`initialPage`** _(Integer)_ - the index of the initially selected tab, defaults to 0 === first tab.

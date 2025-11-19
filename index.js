@@ -316,7 +316,7 @@ const ScrollableTabView = createReactClass({
   _onChangeTab(prevPage, currentPage) {
     this.props.onChangeTab({
       i: currentPage,
-      ref: this._children()[currentPage],
+      component: this._children()[currentPage],
       from: prevPage,
     });
   },
